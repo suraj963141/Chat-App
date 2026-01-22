@@ -11,7 +11,7 @@ const io = new Server(httpServer, {
   cors: {
     origin: [
       "http://localhost:4000",
-      "https://chat-app-git-main-suraj-kumars-projects-f6809a8c.vercel.app",
+      "chat-app-sand-nu.vercel.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,

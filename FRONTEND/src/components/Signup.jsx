@@ -31,8 +31,6 @@ export default function Signup() {
 
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/user/signup`,
-
-        // "https://chatapp-q2p8.onrender.com/api/user/signup",
         userInfo
       );
 
