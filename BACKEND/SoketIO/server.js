@@ -9,7 +9,10 @@ const httpServer = http.createServer(app);
 //  Allow frontend from Vercel
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:4000",
+    origin: [
+      "http://localhost:4000",
+      "https://chat-app-git-main-suraj-kumars-projects-f6809a8c.vercel.app",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },

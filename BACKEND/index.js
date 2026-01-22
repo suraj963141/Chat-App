@@ -16,9 +16,9 @@ app.use(express.json());
 //  CORS configuration for your Vercel frontend
 app.use(
   cors({
-    // origin: ["https://chat-app-beta-gold.vercel.app", "http://localhost:4000"],
+   
     origin: [
-      "https://chat-app-sand-nu.vercel.app/login",
+      "https://chat-app-git-main-suraj-kumars-projects-f6809a8c.vercel.app",
       "http://localhost:4000",
     ],
     credentials: true,
@@ -41,18 +41,6 @@ try {
 app.use("/api/user", userRoute);
 app.use("/api/message", messageRoute);
 
-// Optional deployment code if serving static frontend (not needed with Vercel)
-// if (process.env.NODE_ENV === "production") {
-//   const dirPath = path.resolve();
-//   app.use(express.static("./FRONTEND/dist"));
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(dirPath, "FRONTEND/dist", "index.html"));
-//   });
-// }
-
-// server.listen(PORT, () => {
-//   console.log(` Server is running on port ${PORT}`);
-// });
 
 app.get("/", (req, res) => {
   res.status(200).json({
